@@ -13,7 +13,7 @@ from django.core.wsgi import get_wsgi_application
 from dotenv import load_dotenv
 
 
-project_folder = os.path.expanduser('~/cvProject')
+project_folder = os.path.expanduser('~/')
 load_dotenv(os.path.join(project_folder, '.env'))
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'cvProject.settings')
