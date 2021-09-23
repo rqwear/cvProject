@@ -1,0 +1,14 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+
+}
+
+#bg{
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+}

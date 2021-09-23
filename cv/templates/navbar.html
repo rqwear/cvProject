@@ -1,0 +1,44 @@
+<header>
+    <div class="px-3 py-2 bg-black text-white">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+          </a>
+
+          <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+            <li>
+                 <div class="text-center">
+              <a href="{% url 'home' %}" class="nav-link text-light text-uppercase font-weight-bold">
+                <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+                    <span class="material-icons">houseboat</span></button>
+                  <br>
+                Home
+              </a>
+                 </div>
+            </li>
+            <li>
+                <div class="text-center">
+              <a href="{% url 'projects' %}" class="nav-link text-light text-uppercase font-weight-bold">
+                <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+                    <span class="material-icons">engineering</span></button>
+                  <br>
+                Projects
+              </a>
+                </div>
+            </li>
+            <li>
+                 <div class="text-center">
+              <a href="{% url 'feedback' %}" class="nav-link text-light text-uppercase font-weight-bold">
+               <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+                   <span class="material-icons">forward_to_inbox</span></button>
+                  <br>
+                To contact me
+              </a>
+                 </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </header>

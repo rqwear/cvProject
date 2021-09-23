@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}
+    Home
+{% endblock %}
+{% block content %}
+<div class="container px-4 py-5 my-5 border p-3 text-center bg-light">
+    {% for cv in cvs %}
+        {% if cv.on_main_page == True%}
+            {% if cv.image %}
+                    <img class="img-top mb-3 " src="{{ cv.image.url }}" alt=" " width="200" height="200">
+            {% else %}
+        <p class="fnt-weight-bold mb-0">
+            <a href="{{ product.get_url }}">No photo(Product detail)</a>
+        </p>
+            {% endif %}
+            <hr>
+     <div class="row g-0 p-auto">
+    <h1 class="display-5 fw-bold">{{ cv.title_name }}</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead m-4">{{ cv.cv_text }}</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <a href="{% url 'projects' %}" class="nav-link text-light text-uppercase font-weight-bold">
+              <button type="button" class="btn btn-primary btn-lg px-4 gap-3">My Projects</button></a>
+          <a href="{% url 'feedback' %}" class="nav-link text-light text-uppercase font-weight-bold">
+              <button type="button" class="btn btn-outline-secondary btn-lg px-4">Mail me</button></a>
+          {% if cv.git_page %}
+          <a href="{{ cv.git_page }}" class="nav-link text-light text-uppercase font-weight-bold">
+              <button type="button" class="btn btn-dark btn-lg px-4 gap-3">My GitHub</button></a>
+           {% endif %}
+
+      </div>
+    </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+
+  </div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{%  extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Feedback
+{% endblock %}
+
+
+{% block content %}
+      <div class="container-auto m-3 p-4 border shadow bg-light">
+    {% for info in info_mail %}
+        <h6>Email:</h6>
+        <p>{{ info.mail }}</p>
+        {% if info.tel %}
+        <h6>Tel.:</h6>
+        <p>{{ info.tel }}</p>
+        {% endif %}
+        {% if info.web %}
+        <h6>Web:</h6>
+        <p>{{ info.web }}</p>
+        {% endif %}
+        {% if info.info %}
+        <h6>Else:</h6>
+        <p>{{ info.info }}</p>
+        {% endif %}
+        <a href="mailto:" class="btn btn-primary my-2">Send Mail</a>
+
+        </div>
+
+
+    {% endfor %}
+{% endblock %}

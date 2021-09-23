@@ -1,0 +1,38 @@
+{%  extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Projects
+{% endblock %}
+
+
+{% block content %}
+    <div class="container  text-center mt-3 text-light">
+        <h1>My projects</h1>
+    </div>
+    {% for project in projects %}
+
+    <div class="container mt-4">
+        <div class="col-md-auto">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-light">
+        <div class="col p-4 d-flex flex-column position-static ">
+          <strong class="d-inline-block mb-2 text-primary"><p>{{ project.category }}</p></strong>
+          <h3 class="mb-0">{{ project.name }}</h3>
+          <div class="mb-1 text-muted">{{ project.phase_project }}</div>
+          <p class="card-text mb-auto">{{ project.description|truncatewords:50 }}</p>
+          <a href="{{ project.category.slug }}/{{ project.slug }}" class="stretched-link">Project detail</a>
+        </div>
+        <div class="col-auto d-lg-block">
+            {% if project.image %}
+                <img class="img-top" src="{{ project.image.url }}" alt=" " width="300" height="250">
+            {% else %}
+        <p class="fnt-weight-bold mb-0">
+            <a href="#"></a>
+            {% endif %}
+        </div>
+      </div>
+    </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
