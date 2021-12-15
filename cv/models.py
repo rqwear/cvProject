@@ -1,6 +1,7 @@
 from django.db import models
 from django.urls import reverse
 
+
 # Create your models here.
 
 
@@ -29,7 +30,6 @@ class Project(models.Model):
     phase_project = models.CharField(max_length=250)
     git_page = models.CharField(max_length=250, blank=True)
 
-
     class Meta:
         ordering = ('name',)
         verbose_name = 'project'
@@ -37,6 +37,7 @@ class Project(models.Model):
 
     def __str__(self):
         return self.name
+
 
 class Cv(models.Model):
     title_name = models.CharField(max_length=250)
@@ -71,6 +72,3 @@ class My_mail(models.Model):
         ordering = ('mail',)
         verbose_name = 'My_mail'
         verbose_name_plural = 'My_mails'
-
-
-

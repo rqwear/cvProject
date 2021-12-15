@@ -1,9 +1,12 @@
 from django.shortcuts import render, redirect
-from .models import Category, Project, Cv, My_mail
+
+from .models import Project, Cv, My_mail
+
 
 # Create your views here.
 def home_redirect(request):
     return redirect('/home')
+
 
 def home(request):
     try:
