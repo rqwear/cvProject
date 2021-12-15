@@ -16,7 +16,7 @@ Page with data for feedback. Also, the data is filled in by choice and implement
 ___
 ##Other
 ___
-The sqlite database is used to save the data. The choice fell on this base because of the simple design of the project itself. 
+The sqlite database is used to save the data. The choice fell on this base because of the simple design of the project itself. Use .env to keep your private database and private key. There are special fields in .env for using postgresql. For sqllite in .env, only use the private key field. 
 
 
 
@@ -42,3 +42,4 @@ ___
 ___
 ##Прочее
 Для сохранения данных используеться БД sqlite. Выбор пал на эту базу данный из-за несложной конструкции самого проекта.
+Для сохранения личных о БД и секретного ключа исполюзуйте .env. Для использование postgresql в .env есть специальные поля. Для sqllite в .env используйте только поле секретного ключа.
