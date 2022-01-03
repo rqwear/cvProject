@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 
-from .models import Project, Cv, My_mail
+from .models import Project, Cv, My_mail, Certificate
 
 
 # Create your views here.
@@ -38,3 +38,11 @@ def project_detail(request, category_slug, project_slug):
     except Exception as e:
         raise e
     return render(request, 'project_detail.html', {'project': project})
+
+
+def certificates(request):
+    try:
+        certificates = Certificate.objects.all()
+    except Exception as e:
+        raise e
+    return render(request, 'certificates.html', {'certificates': certificates})

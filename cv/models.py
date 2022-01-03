@@ -6,6 +6,7 @@ from django.urls import reverse
 
 
 class Category(models.Model):
+    """Category for your projects"""
     name = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250, unique=True)
     description = models.TextField(blank=True)
@@ -20,6 +21,7 @@ class Category(models.Model):
 
 
 class Project(models.Model):
+    """Projects on github"""
     name = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250, unique=True)
     description = models.TextField(blank=True)
@@ -40,6 +42,7 @@ class Project(models.Model):
 
 
 class Cv(models.Model):
+    """Your Cv's"""
     title_name = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250, unique=True)
     cv_text = models.TextField(blank=True)
@@ -59,6 +62,7 @@ class Cv(models.Model):
 
 
 class My_mail(models.Model):
+    """Your data for connect"""
     mail = models.EmailField(blank=True)
     slug = models.SlugField(max_length=100, unique=True)
     tel = models.TextField(max_length=200, blank=True)
@@ -72,3 +76,20 @@ class My_mail(models.Model):
         ordering = ('mail',)
         verbose_name = 'My_mail'
         verbose_name_plural = 'My_mails'
+
+class Certificate(models.Model):
+    """Certificates"""
+    name = models.CharField(max_length=250)
+    slug = models.SlugField(max_length=250, unique=True)
+    description = models.TextField(blank=True)
+    image = models.ImageField(upload_to='certificates', blank=True)
+    page = models.CharField(max_length=250, blank=True)
+
+    class Meta:
+        ordering = ('name',)
+        verbose_name = 'certificate'
+        verbose_name_plural = 'certificates'
+
+    def __str__(self):
+        return self.name
+
