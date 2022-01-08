@@ -21,9 +21,9 @@
           <p class="card-text mb-auto">{{ project.description|truncatewords:50 }}</p>
           <a href="{{ project.category.slug }}/{{ project.slug }}" class="stretched-link">Project detail</a>
         </div>
-        <div class="col-auto d-lg-block">
+        <div class="col d-lg-block">
             {% if project.image %}
-                <img class="img-fluid-right" src="{{ project.image.url }}" alt=" " height="auto" width="50%" >
+                <img class="img-fluid float-right" src="{{ project.image.url }}" alt=" " height="auto" width="auto" >
             {% else %}
         <p class="fnt-weight-bold mb-0">
             <a href="#"></a>
