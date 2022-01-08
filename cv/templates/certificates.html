@@ -19,7 +19,7 @@
           <p class="card-text mb-auto">{{ certificate.description|truncatewords:50 }}</p>
         </div>
             {% if certificate.image %}
-                <a href="{{ certificate.page }}"><img class="img-top" src="{{ certificate.image.url }}" alt=" " height="800" width="1000" ></a>
+                <a href="{{ certificate.page }}"><img class="img-fluid" src="{{ certificate.image.url }}" alt=" " height="800" width="auto" ></a>
             {% else %}
         <p class="fnt-weight-bold mb-0">
             <a href="#"></a>
