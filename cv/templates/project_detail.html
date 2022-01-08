@@ -8,9 +8,9 @@
 {% block content %}
  <div class="container px-4 py-5 my-5 border p-3 bg-light">
             <div class="col-auto d-lg-block text-center">
-            {% if project.image %}
-                <img class="rounded mx-auto d-block" src="{{ project.image.url }}" alt=" " width="auto" height="400">
-            {% endif %}
+                {% if project.image %}
+                    <img class="rounded mx-auto d-block" src="{{ project.image.url }}" alt=" " height="auto" width="100%">
+                {% endif %}
             </div>
             <hr>
      <div class="row g-0 p-auto">
